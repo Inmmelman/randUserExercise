@@ -14,7 +14,7 @@ class FetchUsersRequest extends FormRequest
     public function rules()
     {
         return [
-            'limit' => 'sometimes|required|integer|min:1|max:100'
+            'count' => 'sometimes|integer|min:1|max:100'
         ];
     }
 }
