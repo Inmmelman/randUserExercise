@@ -28,6 +28,7 @@ class RandomUserController extends Controller
         $userArrays = $this->converterService->convertMultipleToArray($users);
         $xmlString = $this->xmlConverterService->convertToXml(['user' => $userArrays]);
 
+        //todo: extract to XML response controller
         return response($xmlString, 200)->header('Content-Type', 'text/xml');
     }
 }
